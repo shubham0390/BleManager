@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <!-- standard metrics -->
+    <dimen name="spacing_normal">8dp</dimen>
+
+    <dimen name="padding_normal">16dp</dimen>
+
+    <dimen name="z_card">2dp</dimen>
+
+</resources>

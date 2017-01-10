@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.km2.blemanager.widgets.ForegroundRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/comment_background"
+    android:clipToPadding="false"
+    android:descendantFocusability="blocksDescendants"
+    android:foreground="?android:selectableItemBackground"
+    android:minHeight="?android:listPreferredItemHeight"
+    android:padding="@dimen/spacing_normal"
+    android:stateListAnimator="@animator/comment_selection">
+
+    <TextView
+        android:id="@+id/characteristic_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        tools:text="Name: Name"/>
+
+    <TextView
+        android:id="@+id/characteristic_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/characteristic_name"
+        android:textSize="12dp"
+        tools:text="UUID: 12345-2345-5678-5678-1234"/>
+
+    <LinearLayout
+        android:id="@+id/action_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/characteristic_address"
+        android:gravity="end|center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/notification"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingEnd="@dimen/padding_normal"
+            android:paddingStart="@dimen/padding_normal"
+            android:text="@string/notification"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/read"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingEnd="@dimen/padding_normal"
+            android:paddingStart="@dimen/padding_normal"
+            android:text="@string/read"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/write"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingEnd="@dimen/padding_normal"
+            android:paddingStart="@dimen/padding_normal"
+            android:text="@string/write"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/action_container"
+        android:background="@color/divider"/>
+</com.km2.blemanager.widgets.ForegroundRelativeLayout>
